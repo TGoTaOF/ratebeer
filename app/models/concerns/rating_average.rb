@@ -1,7 +1,7 @@
 module RatingAverage
-    extend ActiveSupport::Concern
+  extend ActiveSupport::Concern
 
-    def average_rating
-        "#{'%.2f' % self.ratings.average(:score).round(2)}"
-    end
+  def average_rating
+    ratings.average(:score).round(2).to_f
+  end
 end
