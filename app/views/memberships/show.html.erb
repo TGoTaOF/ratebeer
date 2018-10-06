@@ -10,5 +10,7 @@
   <%= @membership.user.username %>
 </p>
 
-<%= link_to 'Edit', edit_membership_path(@membership) %> |
+<% if not current_user.nil? %>
+  <%= link_to 'Edit', edit_membership_path(@membership) %> |
+<% end %>
 <%= link_to 'Back', memberships_path %>

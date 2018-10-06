@@ -149,9 +149,13 @@
         1,
         null,
         1,
-        81,
+        4,
         null,
-        58,
+        null,
+        1,
+        97,
+        null,
+        64,
         null,
         null
       ],
@@ -255,6 +259,7 @@
         null
       ],
       "/home/mxsampsa/git/rubyonrails/ratebeer/app/controllers/beers_controller.rb": [
+        1,
         1,
         1,
         1,
@@ -480,6 +485,7 @@
       "/home/mxsampsa/git/rubyonrails/ratebeer/app/controllers/beer_clubs_controller.rb": [
         0,
         0,
+        0,
         null,
         null,
         null,
@@ -641,6 +647,6 @@
         0
       ]
     },
-    "timestamp": 1538862992
+    "timestamp": 1538866307
   }
 }
