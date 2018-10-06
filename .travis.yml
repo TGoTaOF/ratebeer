@@ -6,3 +6,11 @@ rvm:
 script:
 - bundle exec rails db:migrate 
 - bundle exec rspec -fd spec
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: b0fda0fa-a20a-4901-ab5a-200ba27b95c1
+  strategy: git
+  app: quiet-refuge-41570
+  run: "rails db:migrate"
