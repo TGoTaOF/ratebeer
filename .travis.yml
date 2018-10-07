@@ -14,3 +14,6 @@ deploy:
   strategy: git
   app: quiet-refuge-41570
   run: "rails db:migrate"
+
+env:
+  - BEERMAPPING_APIKEY="7a6180134816fccd0b81cc16bf0659ff"
