@@ -11,7 +11,7 @@
     <p>Has made <%= pluralize(@user.ratings.count, 'rating', 'ratings')%>, average rating <%= @user.average_rating%></p>
     <p>Favorite beer: <%= @user.favorite_beer.name %></p>
     <p>Favorite brewery: <%= @user.favorite_brewery.name %></p>
-    <p>Preferred style: <%= @user.favorite_style %></p>
+    <p>Preferred style: <%= @user.favorite_style.name %></p>
   <% end %>
 </p>
 
