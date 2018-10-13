@@ -475,7 +475,22 @@
         null,
         null,
         1,
-        4,
+        0,
+        null,
+        null
+      ],
+      "/home/mxsampsa/git/rubyonrails/ratebeer/lib/apixu_api.rb": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
         null,
         null
       ],
@@ -484,7 +499,6 @@
         1,
         null,
         1,
-        4,
         null,
         null,
         1,
@@ -495,6 +509,8 @@
         3,
         1,
         null,
+        2,
+        2,
         2,
         null,
         null,
@@ -807,6 +823,6 @@
         0
       ]
     },
-    "timestamp": 1539459265
+    "timestamp": 1539463090
   }
 }
