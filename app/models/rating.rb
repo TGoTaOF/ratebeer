@@ -4,6 +4,9 @@ class Rating < ApplicationRecord
 
   validates :score, numericality: { greater_than_or_equal_to: 1, less_than_or_equal_to: 50, only_integer: true }
 
+  scope :recent, -> { order(:created_at) && first(5) }
+  scope :top_users, -> { User.all.sort_by{ |b| -(b.ratings.count || 0) }.first 3 }
+
   def to_s
     "#{beer.name} #{score}"
   end

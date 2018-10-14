@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   include RatingAverage
+  extend Top
 
   has_many :ratings, dependent: :destroy
   has_many :beers, through: :ratings

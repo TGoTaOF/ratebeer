@@ -1,0 +1,28 @@
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <% if given_parameters.first.class == User%>
+      <th></th>
+      <th>ratings</th>
+    <% else %>
+      <th></th>
+      <th>average</th>
+    <% end %>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% given_parameters.each do |object| %>
+      <tr>
+        <% if given_parameters.first.class == User%>
+          <td><%= link_to object.username, object %></td>
+          <td><%= object.ratings.count %></td>
+        <% else %>
+          <td><%= link_to object.name, object %></td>
+          <td><%= object.average_rating %></td>
+        <% end %>
+        <td></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
