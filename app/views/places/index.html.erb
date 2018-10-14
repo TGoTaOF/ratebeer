@@ -1,6 +1,6 @@
 <h1>Beer places search</h1>
 
-<p id="notice"><%= notice %></p>
+
 
 <%= form_tag places_path do %>
   city <%= text_field_tag :city, params[:city] %>
@@ -17,7 +17,7 @@
   <p><strong>wind</strong> <%= (@weather['wind_kph'] * 0.277777778).round(1) %> m/sec, direction <%= @weather['wind_dir'] %> </p>
 
   <h4>places to get your beer</h4>
-  <table>
+  <table class="table table-hover">
   <thead>
     <th>id</th>
     <th>name</th>

@@ -1,8 +1,8 @@
-<p id="notice"><%= notice %></p>
+
 
 <h1>Beer Clubs</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Name</th>
@@ -26,5 +26,5 @@
 
 <br>
 <% if not current_user.nil? %>
-  <%= link_to 'New Beer Club', new_beer_club_path %>
+  <%= (link_to 'New Beer Club', new_beer_club_path, class:'btn btn-primary') %>
 <% end %>
