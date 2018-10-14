@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
     redirect_to signin_path, notice: 'you should be signed in' if current_user.nil?
   end
 
+  def ensure_that_signed_in_is_admin
+    redirect_to current_user, notice: 'you should be admin for this' if !current_user.admin
+  end
+
   def current_user
     return nil if session[:user_id].nil?
 

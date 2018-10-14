@@ -25,6 +25,8 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    @user.closed = false
+    @user.admin = false
 
     respond_to do |format|
       if @user.save
@@ -65,6 +67,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def open
+    @user = User.find(params[:id])
+    @user.update_attribute(:closed, false) if current_user.admin && @user != current_user
+    redirect_to user_path(@user), notice: "Account has been opened"
+  end
+
+  def close
+    @user = User.find(params[:id])
+    @user.update_attribute(:closed, true) if current_user.admin && @user != current_user
+    redirect_to user_path(@user), notice: "Account has been closed"
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -74,6 +88,6 @@ class UsersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(:username, :password, :password_confirmation)
+    params.require(:user).permit(:username, :password, :password_confirmation, :admin, :closed)
   end
 end

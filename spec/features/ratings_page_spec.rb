@@ -41,7 +41,6 @@ describe "when many ratings are given" do
 
   it "all and the count are shown at ratings_page" do 
     visit ratings_path
-    expect(page).to have_content 'Total number of ratings: 5'
     expect(page).to have_content 'anonymous 10 Pekka'
     expect(page).to have_content 'anonymous 20 Pekka'
     expect(page).to have_content 'anonymous 7 Arto'

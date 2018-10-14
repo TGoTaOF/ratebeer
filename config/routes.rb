@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
   resources :styles
   resources :beer_clubs
-  resources :users
+  resources :users do
+    post 'close', on: :member
+    post 'open', on: :member
+  end
   resources :beers
-  resources :breweries
+  resources :breweries do
+    post 'toggle_activity', on: :member
+  end
+  
   resources :memberships
   
   get '/', to: 'breweries#index'
